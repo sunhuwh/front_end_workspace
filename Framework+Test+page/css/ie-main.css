@@ -1,0 +1,124 @@
+/*
+box-sizing三个值：content-box（default），border-box，padding-box。
+1.content-box：padding 和 border 的大小都不算进width中
+2.padding-box: padding大小算进width中，但border大小不算进width中;
+3.border-box : border 和 padding 的大小都算进 width 中;
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex-container {
+
+}
+
+.grid {
+}
+
+div {
+    border:1px solid red;
+    display: block;
+}
+/*
+display: flex 弹性布局，它就像是一个容器，它里面的元素都属于这个容器里面了。
+可以填充多余的空间。
+兼容性：目前支持IE10+，Firefox 18.0+，chrome21.0+，Safari6.1+
+*/
+/* .row {
+    display: -webKit-flex;
+    display: table;
+    width: 100%;
+} */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 24.99%;
+}
+
+.col-4 {
+    width: 33.32%;
+}
+
+.col-5 {
+    width: 41.65%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.31%;
+}
+
+.col-8 {
+    width: 66.64%;
+}
+
+.col-9 {
+    width: 74.97%;
+}
+
+.col-10 {
+    width: 83.3%;
+}
+
+.col-11 {
+    width: 91.63%;
+}
+
+.col-12 {
+    width: 100%;
+}
+/*
+媒体查询，以@media开头
+关键字only兼容老式浏览器
+screen表示适用于所有类型的屏幕，平板，手机，台式机
+print 打印页面时的样式
+max-width 最大宽度
+min-width 最小宽度
+orientation 两个值，1.landscape橫屏 2.portrait竖屏
+*/
+@media only screen and (max-width:500px) {
+    p {
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width:500px) and (orientation : landscape) {
+    p {
+        display: none;
+    }
+} */
+
+/* @media only screen and (min-width:500px) {
+    p {
+        display: none;
+    }
+} */
+
+/* @media only print and (max-width:500px) {
+    p {
+        display: none;
+    }
+} */
